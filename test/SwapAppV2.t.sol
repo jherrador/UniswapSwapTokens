@@ -3,19 +3,19 @@
 pragma solidity 0.8.30;
 
 import "forge-std/Test.sol";
-import "../src/SwapApp.sol";
+import "../src/SwapAppV2.sol";
 import "../src/interfaces/IV2Factory.sol";
 import "../lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
 import "../lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol";
 
-contract SwapAppTest is Test {
-    SwapApp app;
+contract SwapAppV2Test is Test {
+    SwapAppV2 app;
     address V2Router02Address = 0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24;
     address V2FactoryAddress = 0x8909Dc15e40173Ff4699343b6eB8132c65e18eC6;
     address user = 0x094357A38EDd84501Ac438590531EeBDe864cC13;
 
     function setUp() public {
-        app = new SwapApp(V2Router02Address, V2FactoryAddress);
+        app = new SwapAppV2(V2Router02Address, V2FactoryAddress);
     }
 
     function testHasBeenDeployedCorrectly() public view {
