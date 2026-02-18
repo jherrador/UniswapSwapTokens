@@ -12,7 +12,7 @@ contract SwapAppV2Test is Test {
     SwapAppV2 app;
     address V2Router02Address = 0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24;
     address V2FactoryAddress = 0x8909Dc15e40173Ff4699343b6eB8132c65e18eC6;
-    address user = 0x094357A38EDd84501Ac438590531EeBDe864cC13;
+    address user = 0x048ef1062cbb39B338Ac2685dA72adf104b4cEF5;
 
     function setUp() public {
         app = new SwapAppV2(V2Router02Address, V2FactoryAddress);
